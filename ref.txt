@@ -1,0 +1,23 @@
+locations
+http://www.geonames.org/export/codes.html
+https://download.geonames.org/export/dump/
+https://download.geonames.org/export/zip/
+
+
+no cors extension for microsoft develop app
+
+https://entra.microsoft.com/#view/Microsoft_AAD_IAM/EntraDashboard.ReactView
+https://entra.microsoft.com/#view/Microsoft_AAD_RegisteredApps/ApplicationsListBlade/quickStartType~/null/sourceType/Microsoft_AAD_IAM
+
+
+microsoft app registration:
+
+when creating application:
+  - use web instead of SPA for backend
+  - set correct redirect url
+  - set support type as both Azure and Personal accounts
+  - set all required permissions
+  - create credentials and copy client secret
+
+in server code following are basic scopes required
+  ['user.read', 'openid', 'email', 'profile']

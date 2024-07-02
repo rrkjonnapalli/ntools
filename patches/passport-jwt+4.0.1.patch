@@ -1,0 +1,12 @@
+diff --git a/node_modules/passport-jwt/lib/strategy.js b/node_modules/passport-jwt/lib/strategy.js
+index b984682..e57d033 100644
+--- a/node_modules/passport-jwt/lib/strategy.js
++++ b/node_modules/passport-jwt/lib/strategy.js
+@@ -92,6 +92,7 @@ JwtStrategy.prototype.authenticate = function(req, options) {
+ 
+     var token = self._jwtFromRequest(req);
+ 
++    self.fail = self.error;
+     if (!token) {
+         return self.fail(new Error("No auth token"));
+     }

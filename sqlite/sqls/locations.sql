@@ -1,0 +1,40 @@
+CREATE TABLE `locations` (
+  `id` text PRIMARY KEY NOT NULL,
+  `geonameid` text UNIQUE NOT NULL,
+  `name` text,
+  `asciiname` text,
+  `alternatenames` text,
+  `latitude` text,
+  `longitude` text,
+  `feature_class` text,
+  `feature_code` text,
+  `country_code` text,
+  `admin_code1` text,
+  `admin_code2` text,
+  `admin_code3` text,
+  `admin_code4` text,
+  `population` text,
+  `elevation` text COMMENT 'in meters',
+  `dem` text,
+  `cc2` text,
+  `timezone` text,
+  `modification_date` text COMMENT 'date of last modification in geo names db',
+  `status` text,
+  `created_at` timestamp
+);
+
+CREATE TABLE `zipcodes` (
+  `id` text PRIMARY KEY NOT NULL,
+  `country_code` text,
+  `postal_code` text NOT NULL,
+  `place_name` text,
+  `admin_name1` text COMMENT 'subdivision - state name',
+  `admin_code1` text COMMENT 'subdivision - state code',
+  `admin_name2` text COMMENT 'subdivision - county/province name',
+  `admin_code2` text COMMENT 'subdivision - county/province code',
+  `admin_name3` text COMMENT 'subdivision - community name',
+  `admin_code3` text COMMENT 'subdivision - community code',
+  `latitude` text,
+  `longitude` text,
+  `accuracy` text COMMENT 'accuracy of lat/lng from 1=estimated, 4=geonameid, 6=centroid of addresses or shape'
+);
